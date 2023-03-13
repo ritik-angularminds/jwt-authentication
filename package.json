@@ -4,8 +4,9 @@
   "description": "Node.js application for user authentication usin JSON Web Tokens.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js",
+    "client": "cd client && ng serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -13,7 +14,7 @@
     "url": "git+https://github.com/ritik-angularminds/jwt-authentication.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "ritik-angularminds",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ritik-angularminds/jwt-authentication/issues"
