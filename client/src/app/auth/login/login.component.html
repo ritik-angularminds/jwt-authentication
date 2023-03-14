@@ -1,0 +1,29 @@
+<main class="d-flex align-items-center justify-content-center">
+    <div class="card">
+        <div class="row align-items-center">
+            <div class="col-7">
+                <img src="assets/vecteezy_3d-camera-illustration-icon-transparent_8470377_222.png" alt="authenticate">
+            </div>
+            <div class="col-5">
+                <form [formGroup]="loginForm" (ngSubmit)="login()">
+                    <div class="text-center h2 mb-5">
+                        Welcome!
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control border-3 rounded-pill" id="email"
+                            placeholder="name@example.com" formControlName="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control border-3 rounded-pill" id="password"
+                            formControlName="password">
+                    </div>
+                    <hr>
+                    <button class="btn btn-outline-primary rounded-pill w-100 mb-2" type="submit">Login</button>
+                </form>
+                <button class="btn btn-light rounded-pill w-100" type="button">Register</button>
+            </div>
+        </div>
+    </div>
+</main>
