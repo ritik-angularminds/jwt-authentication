@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { ApiService } from 'src/app/services/api.service';
+import { ToastService } from 'src/app/services/toast.service';
 import * as store from 'store';
 
 @Component({
@@ -15,7 +17,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private api: ApiService,
-    private router: Router
+    private router: Router,
+    private toast: ToastService
   ) { }
 
   ngOnInit() {
@@ -30,9 +33,11 @@ export class LoginComponent implements OnInit {
       (response: any) => {
         store.set('token', response.token);
         this.router.navigate(['/dashboard']);
+        this.toast.show('success', 'Login Successfull!');
       },
       (error: any) => {
         console.error(error.error);
+        this.toast.show('error', error.error);
       });
   }
 

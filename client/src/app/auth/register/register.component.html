@@ -1,1 +1,39 @@
-<p>register works!</p>
+<main class="d-flex align-items-center justify-content-center">
+    <div class="card">
+        <div class="row">
+            <div class="col-5">
+                <div class="text-center h2 mb-5">
+                    Sign Up!
+                </div>
+                <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
+                    <div class="mb-2">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="firstName" class="form-control border-3 rounded-pill" id="firstName"
+                            placeholder="Miles" formControlName="firstName">
+                    </div>
+                    <div class="mb-2">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="lastName" class="form-control border-3 rounded-pill" id="lastName"
+                            placeholder="Morales" formControlName="lastName">
+                    </div>
+                    <div class="mb-2">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control border-3 rounded-pill" id="email"
+                            placeholder="name@example.com" formControlName="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control border-3 rounded-pill" id="password"
+                            formControlName="password">
+                    </div>
+                    <button type="submit" class="btn btn-primary rounded-pill">Sign Up</button>
+                    <button type="button" class="btn btn-light rounded-pill ms-2">Go to Login</button>
+                </form>
+            </div>
+            <div class="col-7 d-flex align-items-center justify-content-center">
+                <img src="assets/vecteezy_travel-object-photo-3d-illustration_8853650_949.png" alt="signup">
+                <!-- <a href="https://www.vecteezy.com/free-png/3d-camera">3d Camera PNGs by Vecteezy</a> -->
+            </div>
+        </div>
+    </div>
+</main>

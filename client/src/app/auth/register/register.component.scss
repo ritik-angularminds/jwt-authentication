@@ -1,0 +1,23 @@
+.card {
+    width: 60%;
+    min-width: 500px;
+    // background-color: #979595; 
+    border: none;
+
+    img {
+        width: 100%;
+        animation: 2s float ease-in-out infinite;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: rotate(3deg);
+    }
+    50% {
+        transform: rotate(-2deg);
+    }
+    100% {
+        transform: rotate(3deg);
+    }
+}
